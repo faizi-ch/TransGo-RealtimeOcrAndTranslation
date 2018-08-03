@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.ByteCrunchers.TransGo.RealTimeOCR"
+        minSdkVersion 21
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.rmtheis:tess-two:8.0.0+'
+    compile files('libs/google-api-translate-java-0.98-mod2.jar')
+    compile files('libs/json_simple-1.1.jar')
+    compile files('libs/jtar-1.0.4.jar')
+    compile files('libs/microsoft-translator-java-api-0.6-mod.jar')
+    compile 'com.specyci:residemenu:1.6+'
+}
